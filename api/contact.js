@@ -109,7 +109,7 @@ export default async function handler(req, res) {
       <blockquote style="border-left:3px solid #4f46e5;padding-left:16px;margin:16px 0;color:#666;">
         ${escapeHtml(message)}
       </blockquote>
-      <p>Best regards,<br/>Devanshu Singh</p>
+      <p>Best regards,<br/>Himanshu Singh</p>
     `;
     
     // Send both emails
@@ -126,7 +126,7 @@ export default async function handler(req, res) {
       sgMail.send({
         to: reply_to,
         from: SENDGRID_FROM,
-        subject: "Thank you for contacting me - Devanshu Singh",
+        subject: "Thank you for contacting me",
         text: `Hi ${from_name},\n\nThank you for reaching out through my portfolio. I have received your message and will get back to you soon.\n\nBest regards,\nDevanshu Singh`,
         html: autoReplyHtml
       })
