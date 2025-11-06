@@ -33,7 +33,7 @@ const Navbar = () => {
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
+
     { href: "#experience", label: "Experience" },
     { href: "#contact", label: "Contact" },
   ];
@@ -64,7 +64,7 @@ const Navbar = () => {
             <a href="#contact" className="btn px-3 py-1.5 bg-slate-700 text-white hover:bg-slate-600 hidden sm:inline-flex">
               <Mail size={16} />Contact
             </a>
-            <a href="/Devanshu Singh.docx" className="btn px-3 py-1.5 bg-indigo-500 hover:bg-indigo-600 text-white">
+            <a href="/HimanshuSinghCV.pdf" className="btn px-3 py-1.5 bg-indigo-500 hover:bg-indigo-600 text-white">
               <Download size={16} />Resume
             </a>
           </div>
@@ -106,7 +106,7 @@ const Hero = () => {
               Passionate about harnessing the full Microsoft 365 and Azure ecosystem — from Copilot and AI Agents to Power Platform, SPFx, and Dataverse — to engineer intelligent, automated, and scalable enterprise solutions. Driven by innovation and precision, focused on transforming data, workflows, and user experiences into seamless digital ecosystems that empower smarter decision-making and real business impact.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#projects" className="btn btn-primary"><Rocket size={16} /> See Projects</a>
+              <a href="#experience" className="btn btn-primary"><Rocket size={16} /> See Experience</a>
               <a href="https://www.linkedin.com/in/himanshu-singh-infy/" target="_blank" rel="noreferrer" className="btn btn-outline">
                 <Linkedin size={16} /> LinkedIn
               </a>
@@ -118,7 +118,7 @@ const Hero = () => {
 
           <motion.div
             initial={{ opacity: 0, scale: .9 }} whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: .8 }} viewport={{ once: true }}
+            transition={{ duration: .8 }}
             className="relative aspect-square img-frame"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/30 via-sky-500/20 to-emerald-500/30" />
@@ -224,57 +224,7 @@ const Skills = () => {
   );
 };
 
-/* ---------- PROJECTS ---------- */
-const projects = [
-  {
-    title: "Citi-UpStart Programme - New Market",
-    desc: "Developed an AI-driven dynamic pricing and waste optimization model using Python, SQL, and Prophet to forecast demand and identify near-expiry stock. Built Power BI and Tableau dashboards for perishable trends and performance insights, reducing food waste by 40% and boosting profit margins by 25%, supporting UN SDG 12.3 on sustainable consumption.",
-    tags: ["Python", "Prophet", "Power BI", "SQL", "ML"],
-    link: "https://newmarketprice.netlify.app/",
-  },
-  {
-    title: "National College of Ireland - Exchequer Wine Bar, Dublin",
-    desc: "Designed and implemented Salesforce CRM solutions using Apex, LWC, and Flow automation to streamline customer engagement, automate marketing workflows, and integrate real-time analytics for improved operational efficiency. Developed Salesforce - Power BI dashboards and executed SQL-based and Python-driven purchase trend and performance analysis, enabling 20% higher profitability through data-backed decision-making. Leveraged predictive analytics and Salesforce data modeling (Prophet, Tableau, PostgreSQL, MongoDB) for demand forecasting and customer segmentation, improving retention by 25% and reducing inventory waste by 30%.",
-    tags: ["Salesforce", "Apex", "LWC", "REST"]
-  },
-  {
-    title: "Himanshu Singh - Portfolio",
-    desc: "This is my self made portfolio, developed on react using the recaptcha for contact security, Twilio and Send Grid for custom email api for a working contact us section. Also used Tailwind and framer motion for enhanced animations and smooth scrolling as a part for my full stack up skill in web development, This portfolio is currently a single page application which im working to make it multipage using routing. Feedback is highly appreciated.",
-    tags: ["React", "Node", "PostgreSQL", "Framer Motion"]
-  },
-];
 
-const Projects = () => {
-  return (
-    <Section id="projects" className="py-8">
-      <div className="flex items-end justify-between mb-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">Projects</h2>
-        <a href="#contact" className="text-white/80 hover:text-white flex items-center gap-1">
-          Work with me <ChevronRight size={16} />
-        </a>
-      </div>
-      <div className="projects-grid md:grid-cols-3 gap-6">
-        {projects.map((p, idx) => (
-          <motion.a
-            key={idx} href={p.link} target="_blank" rel="noreferrer"
-            initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }} transition={{ duration: .6, delay: idx * .1 }}
-            className="group card p-5 block"
-          >
-            <div className="h-36 rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-800 grid place-items-center">
-              <ExternalLink className="text-white/70" />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-white group-hover:underline underline-offset-4">{p.title}</h3>
-            <p className="text-white/70 text-sm mt-1">{p.desc}</p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {p.tags.map((t) => (<span key={t} className="tag">{t}</span>))}
-            </div>
-          </motion.a>
-        ))}
-      </div>
-    </Section>
-  );
-};
 
 /* ---------- EXPERIENCE ---------- */
 const Experience = () => { 
@@ -348,7 +298,7 @@ return (
           <motion.div
             key={i}
             initial={{ x: -24, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }} transition={{ duration: .6 }}
+            transition={{ duration: .6 }}
             className="timeline-item"
           >
             <div className="timeline-dot" />
@@ -532,7 +482,7 @@ export default function DynamicPortfolio() {
         <Hero />
         <About />
         <Skills />
-        <Projects />
+
         <Experience />
         <Contact />
       </main>
