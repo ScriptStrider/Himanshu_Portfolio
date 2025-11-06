@@ -277,7 +277,7 @@ const Projects = () => {
 };
 
 /* ---------- EXPERIENCE ---------- */
-const Experience = () => {
+const Experience = () => { 
   const items = [
     {
       role: "Manager", company: "VOIS", time: "Dec 2022 2025 – Present", duration: "3+ years",
