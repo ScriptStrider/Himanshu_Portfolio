@@ -64,7 +64,7 @@ const Navbar = () => {
             <a href="#contact" className="btn px-3 py-1.5 bg-slate-700 text-white hover:bg-slate-600 hidden sm:inline-flex">
               <Mail size={16} />Contact
             </a>
-            <a href="/HimanshuSinghCV.pdf" className="btn px-3 py-1.5 bg-indigo-500 hover:bg-indigo-600 text-white">
+            <a href="/Himanshu Singh CV Latest.pdf" className="btn px-3 py-1.5 bg-indigo-500 hover:bg-indigo-600 text-white">
               <Download size={16} />Resume
             </a>
           </div>
